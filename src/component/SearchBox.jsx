@@ -1,7 +1,7 @@
 import TextField from "@mui/material/TextField";
 import SendIcon from "@mui/icons-material/Send";
 import Button from "@mui/material/Button";
-import "./SearchBox.css";
+import "../style/SearchBox.css";
 import { useState } from "react";
 
 export default function SearchBox({ updateInfo }) {
@@ -12,7 +12,7 @@ export default function SearchBox({ updateInfo }) {
 
 	let getWeatherInfo = async () => {
 		let respo = await fetch(
-			`${Api_Url}?q=${city}&appid=${Api_key}&units=metric`
+			`${Api_Url}?q=${city}&appid=${Api_key}&units=metric`,
 		);
 
 		let jsonRes = await respo.json();
